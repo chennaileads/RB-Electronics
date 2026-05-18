@@ -139,9 +139,9 @@
 <div class="floating-contact">
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/917200856662" target="_blank" class="contact-btn whatsapp">
+  <!-- <a href="https://wa.me/917200856662" target="_blank" class="contact-btn whatsapp">
     <i class="fab fa-whatsapp"></i>
-  </a>
+  </a> -->
 
   <!-- Call -->
   <a href="tel:+917200856662" class="contact-btn call">
@@ -1259,25 +1259,24 @@
     <script src="assets/js/gsap/ScrollTrigger.js"></script>
     <script src="assets/js/gsap/SplitText.js"></script>
 
+<script>
+const formToggle = document.getElementById("formToggle");
+const enquiryBox = document.getElementById("enquiryBox");
 
- <script>
-  const toggleBtn = document.getElementById("callToggle");
-  const enquiryBox = document.getElementById("enquiryBox");
-
-  toggleBtn.addEventListener("click", () => {
-    enquiryBox.style.display =
-      enquiryBox.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".floating-contact")) {
-      enquiryBox.style.display = "none";
-    }
-  });
-  toggleBtn.addEventListener("click", () => {
+/* Toggle Form */
+formToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
   enquiryBox.classList.toggle("show");
 });
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".floating-contact")) {
+    enquiryBox.classList.remove("show");
+  }
+});
 </script>
+
 
     <!-- template js -->
     <script src="assets/js/script.js"></script>

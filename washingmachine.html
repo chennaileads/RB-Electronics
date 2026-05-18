@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> RB Electronics </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="assets/images/favicons/site.webmanifest" /> -->
+    <meta name="description" content=" " />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-all.css" />
+    <link rel="stylesheet" href="assets/css/jarallax.css" />
+    <link rel="stylesheet" href="assets/css/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+
+
+    <link rel="stylesheet" href="assets/css/module-css/slider.css" />
+    <link rel="stylesheet" href="assets/css/module-css/footer.css" />
+    <link rel="stylesheet" href="assets/css/module-css/feature.css" />
+    <link rel="stylesheet" href="assets/css/module-css/about.css" />
+    <link rel="stylesheet" href="assets/css/module-css/service.css" />
+    <link rel="stylesheet" href="assets/css/module-css/counter.css" />
+    <link rel="stylesheet" href="assets/css/module-css/why-choose.css" />
+    <link rel="stylesheet" href="assets/css/module-css/project.css" />
+    <link rel="stylesheet" href="assets/css/module-css/video.css" />
+    <link rel="stylesheet" href="assets/css/module-css/team.css" />
+    <link rel="stylesheet" href="assets/css/module-css/brand.css" />
+    <link rel="stylesheet" href="assets/css/module-css/pricing.css" />
+    <link rel="stylesheet" href="assets/css/module-css/testimonial.css" />
+    <link rel="stylesheet" href="assets/css/module-css/blog.css" />
+    <link rel="stylesheet" href="assets/css/module-css/page-header.css" />
+    <link rel="stylesheet" href="assets/css/module-css/faq.css" />
+
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+ <style>
+    .floating-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Buttons Base */
+.contact-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* WhatsApp (Official Green) */
+.whatsapp {
+  background: #25D366;
+}
+
+/* Call (Professional Red) */
+.call {
+  background: #E53935;
+}
+
+/* Hover Effects */
+.contact-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Glow Effect */
+.whatsapp:hover {
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+}
+
+.call:hover {
+  box-shadow: 0 0 15px rgba(229, 57, 53, 0.6);
+}
+
+/* Floating Animation */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.contact-btn {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+.call {
+  animation-delay: 1.5s;
+}
+</style>
+<body class="custom-cursor">
+<div class="floating-contact">
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/917200856662" target="_blank" class="contact-btn whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call -->
+  <a href="tel:+917200856662" class="contact-btn call">
+    <i class="fas fa-phone"></i>
+  </a>
+
+</div>
+
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+
+  <div class="page-wrapper">
+       <header class="main-header-three">
+            <div class="main-menu-three__top">
+                <div class="container">
+                    <div class="main-menu-three__top-inner">
+                        <ul class="list-unstyled main-menu-three__contact-list">
+                            <li>
+                                <div class="icon">
+                                    <i class="icon-call"></i>
+                                </div>
+                                <div class="text">
+                                    <p><a href="tel:+917200856662">+91 72008 56662</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="icon-location"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Chennai, Tamil Nadu</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="main-menu-three__top-right">
+                            <div class="main-menu-three__social">
+                              
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                              
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu main-menu-three">
+                <div class="main-menu-three__wrapper">
+                    <div class="container">
+                        <div class="main-menu-three__wrapper-inner">
+                            <div class="main-menu-three__left">
+                                <div class="main-menu-three__logo">
+                                    <a href="index.html">
+                                      <h1> RB Electronics</h1> 
+                                        <!-- <img src="assets/images/resources/logo-1.png" alt=""> -->
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="main-menu-two__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li class="megamenu ">
+                                        <a href="index.html">Home </a>
+                                       
+                                    </li>
+                                    <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="services.html">Services</a>
+                                        <ul class="shadow-box">
+                                            <li><a href="LEDTV.html">LED Tv</a></li>
+                                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                                            <li><a href="microwave.html">Microwave</a></li>
+                                            <li><a href="washingmachine.html">Washing Machine</a></li>
+                                            <li><a href="AC.html">Air Conditioner</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                  
+                                    
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-menu-three__right">
+                                <div class="main-menu-three__btn-box">
+                                    <a href="contact.html" class="thm-btn">Book Now<span
+                                            class="icon-arrow-right"></span></a>
+                                </div>
+                               
+                                
+                                <!-- <div class="main-menu-three__nav-sidebar-icon">
+                                    <a class="navSidebar-button" href="#">
+                                        <span class="icon-dots-menu-three-one"></span>
+                                        <span class="icon-dots-menu-three-two"></span>
+                                        <span class="icon-dots-menu-three-three"></span>
+                                    </a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner6.webp);">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h3>Washing Machine</h3>
+                    <div class="thm-breadcrumb__inner">
+                        <ul class="thm-breadcrumb list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><span class="icon-angle-right"></span></li>
+                            <li>Washing Machine</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+   
+
+  <!--Service Details Start-->
+        <section class="service-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="service-details__sidebar">
+                            <div class="service-details__services-box">
+                                <h3 class="service-details__services-title">Our Services</h3>
+                                <ul class="service-details__services-list list-unstyled">
+                                    <li>
+                                        <a href="LEDTV.html">Maintenance Service<span
+                                                class="icon-arrow-right"></span></a>
+                                    </li>
+                                    <li >
+                                        <a href="refrigerator.html">Refrigerator<span
+                                                class="icon-arrow-right"></span></a>
+                                    </li>
+                                    <li >
+                                        <a href="microwave.html">Microwave<span
+                                                class="icon-arrow-right"></span></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="washingmachine.html">Washing Machine<span
+                                                class="icon-arrow-right"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="AC.html">Air Conditioner<span
+                                                class="icon-arrow-right"></span></a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                            <div class="service-details__get-started">
+                                <h3 class="service-details__get-started-title">Get Started Today</h3>
+                                  <p class="service-details__get-started-text">
+                We provide fast and reliable Refregerator repair services with experienced
+                technicians for all major brands and models.
+            </p>
+                                <ul class="service-details__get-started-points list-unstyled">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-call"></span>
+                                        </div>
+                                        <p><a href="tel:+919876543210">+91 9876543210</a></p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-envelope"></span>
+                                        </div>
+                                        <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-location"></span>
+                                        </div>
+                                        <p>Chennai, TamilNadu</p>
+                                    </li>
+                                </ul>
+                                <div class="service-details__get-started-btn-box">
+                                    <a href="contact.html" class="service-details__get-started-btn thm-btn">get in
+                                        touch</a>
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                  
+<div class="col-xl-8 col-lg-7">
+    <div class="service-details__left">
+
+        <div class="service-details__img">
+            <img src="assets/images/wash.webp" alt="Washing Machine Service">
+        </div>
+
+        <h3 class="service-details__title-1">
+            Professional Washing Machine Repair Service
+        </h3>
+
+        <p class="service-details__text-1">
+            RB Electronics provides expert washing machine repair and maintenance
+            services for all leading brands. Our experienced technicians quickly
+            identify and fix drum issues, water leakage, motor faults, and spinning
+            problems with reliable repair solutions.
+        </p>
+
+        <p class="service-details__text-2">
+            We offer fast doorstep washing machine repair services across Chennai
+            using quality spare parts and advanced tools. From top-load to front-load
+            washing machines, we ensure efficient servicing and complete customer
+            satisfaction.
+        </p>
+
+        <ul class="service-details__points-list list-unstyled">
+
+            <li>
+                <div class="icon">
+                    <span class="icon-arrow-right"></span>
+                </div>
+                <p>Washing machine drum and motor repair services</p>
+            </li>
+
+            <li>
+                <div class="icon">
+                    <span class="icon-arrow-right"></span>
+                </div>
+                <p>Water leakage and drainage issue fixing</p>
+            </li>
+
+            <li>
+                <div class="icon">
+                    <span class="icon-arrow-right"></span>
+                </div>
+                <p>Spin, vibration, and electrical fault solutions</p>
+            </li>
+
+            <li>
+                <div class="icon">
+                    <span class="icon-arrow-right"></span>
+                </div>
+                <p>Quick doorstep washing machine service across Chennai</p>
+            </li>
+
+        </ul>
+
+        <div class="service-details__img-box">
+            <div class="row">
+
+                <div class="col-xl-6">
+                    <div class="service-details__img-box-single">
+
+                        <div class="service-details__img-box-content">
+
+                            <div class="service-details__img-box-content-icon-and-title">
+                                <div class="service-details__img-box-content-icon">
+                                    <span class="icon-project-complete"></span>
+                                </div>
+
+                                <h3 class="service-details__img-box-content-title">
+                                    Trusted Repair Service
+                                </h3>
+                            </div>
+
+                            <p class="service-details__img-box-content-text">
+                                We provide dependable washing machine repair
+                                services using genuine spare parts and professional
+                                tools for long-lasting performance.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6">
+                    <div class="service-details__img-box-single">
+
+                        <div class="service-details__img-box-content">
+
+                            <div class="service-details__img-box-content-icon-and-title">
+                                <div class="service-details__img-box-content-icon">
+                                    <span class="icon-certified"></span>
+                                </div>
+
+                                <h3 class="service-details__img-box-content-title">
+                                    100% Customer Satisfaction
+                                </h3>
+                            </div>
+
+                            <p class="service-details__img-box-content-text">
+                                Our skilled technicians ensure quick response,
+                                affordable pricing, and quality washing machine
+                                repair services for every customer.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+        <!--Service Details End-->
+
+<!--Brand One Start-->
+        <!-- <section class="brand-one">
+            <div class="container">
+                <div class="brand-one__carousel owl-theme owl-carousel">
+                  
+                    <div class="item">
+                        <div class="brand-one__single">
+                            <div class="brand-one__img">
+                                <img src="assets/images/service18.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="item">
+                        <div class="brand-one__single">
+                            <div class="brand-one__img">
+                                <img src="assets/images/service19.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="brand-one__single">
+                            <div class="brand-one__img">
+                                <img src="assets/images/service1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="item">
+                        <div class="brand-one__single">
+                            <div class="brand-one__img">
+                                <img src="assets/images/service3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="item">
+                        <div class="brand-one__single">
+                            <div class="brand-one__img">
+                                <img src="assets/images/service11.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                   
+                   
+                   
+                    
+                </div>
+            </div>
+        </section> -->
+        <!--Brand One End-->
+
+
+
+
+
+
+ <!--Site Footer Two Start-->
+        <footer class="site-footer-two">
+            <div class="site-footer-two__shape-1 float-bob-x">
+                <img src="assets/images/shapes/site-footer-two-shape-1.png" alt="">
+            </div>
+            <div class="container">
+                <div class="site-footer-two__top">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="footer-widget-two__column footer-widget-two__about">
+                                 <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__title">About Us</h3>
+                                </div>
+                                <!-- <div class="footer-widget-two__logo">
+                                    <a href="index.html">
+                                        <img src="assets/images/resources/logo-2.png" alt="">
+                                    </a>
+                                </div> -->
+                               <p class="footer-widget-two__about-text">
+    RB Electronics provides reliable home appliance repair services 
+    with expert technicians for AC, LED TV, refrigerator, microwave, 
+    and washing machine repairs.
+</p>
+                                <div class="site-footer-two__social">
+                                    <a href="#"><i class="icon-facebook"></i></a>
+                                    
+                                    <a href="#"><i class="icon-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget-two__column footer-widget-two__usefull-link">
+                                <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__title">Our Company</h3>
+                                </div>
+                                <div class="footer-widget-two__link-box">
+                                    <ul class="footer-widget-two__link list-unstyled">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="footer-widget-two__column footer-widget-two__services">
+                                <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__title">Our Services</h3>
+                                </div>
+                                <ul class="footer-widget-two__link list-unstyled">
+                                    <li><a href="LEDTV.html">LED TV</a></li>
+                                    <li><a href="refrigerator.html">Refrigerator</a></li>
+                                    <li><a href="microwave.html">Microwave</a></li>
+                                    <li><a href="washingmachine.html">Washing Machine</a></li>
+                                    <li><a href="AC.html">Air Conditioner</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget-two__column footer-widget-two__newsletter">
+                                <div class="footer-widget-two__title-box">
+                                <h3 class="footer-widget-two__newsletter-title">Contact Us</h3></div>
+                               <ul class="footer-widget-two__contact list-unstyled">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-phone-call"></span>
+                                        </div>
+                                        <div class="content">
+                                            <h3>Mobile</h3>
+                                            <p><a href="tel:+917200856662">+91 72008 56662</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-location"></span>
+                                        </div>
+                                        <div class="content">
+                                            <h3>Location</h3>
+                                            <p>Chennai, TamilNadu</p>
+                                        </div>
+                                    </li>
+                                     <!-- <li>
+                                        <div class="icon">
+                                            <span class="icon-envelope"></span>
+                                        </div>
+                                        <div class="content">
+                                            <h3>Email</h3>
+                                         <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                                        </div>
+                                    </li> -->
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-two__bottom">
+                <div class="container">
+                    <div class="site-footer-two__bottom-inner">
+                      <p class="site-footer-two__bottom-text">
+    © <script>document.write(new Date().getFullYear())</script> 
+    RB Electronics. All Rights Reserved. 
+    Developed by 
+    <a href="https://chennaileads.com/" target="_blank">
+        Chennai Leads
+    </a>
+</p>
+                        <!-- <ul class="list-unstyled site-footer-two__bottom-menu">
+                            <li><a href="contact.html">Support</a></li>
+                            <li><a href="about.html">Terms and Condition</a></li>
+                            <li><a href="about.html">Privacy and Policy</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer Two End-->
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image">
+                    <!-- <img src="assets/images/resources/logo-2.png" width="140"
+                        alt="" /> -->
+                        <h1>RB Electronics</h1>
+                    </a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <!-- <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                </li> -->
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+9172008 56662">+91 72008 56662</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                  
+                    <a href="#" class="fab fa-facebook-square"></a>
+                  
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <script src="assets/js/jquery-latest.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/wNumb.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/marquee.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="assets/js/jquery.fittext.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+    <script src="assets/js/jquery-sidebar-content.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+
+
+    <script src="assets/js/gsap/gsap.js"></script>
+    <script src="assets/js/gsap/ScrollTrigger.js"></script>
+    <script src="assets/js/gsap/SplitText.js"></script>
+
+
+ <script>
+  const toggleBtn = document.getElementById("callToggle");
+  const enquiryBox = document.getElementById("enquiryBox");
+
+  toggleBtn.addEventListener("click", () => {
+    enquiryBox.style.display =
+      enquiryBox.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".floating-contact")) {
+      enquiryBox.style.display = "none";
+    }
+  });
+  toggleBtn.addEventListener("click", () => {
+  enquiryBox.classList.toggle("show");
+});
+</script>
+
+    <!-- template js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+
+<!-- Mirrored from weblayout.mnsithub.com/html/fixpro/main-html/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 May 2026 04:50:55 GMT -->
+</html>

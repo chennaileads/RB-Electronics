@@ -61,89 +61,304 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 </head>
+<style>
 
- <style>
-    .floating-contact {
-  position: fixed;
-  right: 20px;
-  bottom: 30px;
-  z-index: 9999;
+/* ================================
+   FLOATING CONTACT WRAPPER
+================================ */
 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.floating-contact{
+    position:fixed;
+    right:20px;
+    bottom:20px;   /* Fixed Bottom */
+    z-index:99999;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    gap:14px;
 }
 
-/* Buttons Base */
-.contact-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ================================
+   BUTTON BASE
+================================ */
 
-  font-size: 22px;
-  color: #fff;
-  text-decoration: none;
+.contact-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-  position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+
+    color:#fff;
+    font-size:24px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,0.25);
+
+    transition:0.3s ease;
+
+    position:relative;
+
+    animation:floatY 3s ease-in-out infinite;
 }
 
-/* WhatsApp (Official Green) */
-.whatsapp {
-  background: #25D366;
+/* ================================
+   WHATSAPP BUTTON
+================================ */
+
+.whatsapp{
+    background:#25D366;
 }
 
-/* Call (Professional Red) */
-.call {
-  background: #E53935;
+.whatsapp:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(37,211,102,0.6);
 }
 
-/* Hover Effects */
-.contact-btn:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+/* ================================
+   CALL BUTTON
+================================ */
+
+.call{
+    background:#E53935;
+    animation-delay:1s;
 }
 
-/* Glow Effect */
-.whatsapp:hover {
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+.call:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(229,57,53,0.6);
 }
 
-.call:hover {
-  box-shadow: 0 0 15px rgba(229, 57, 53, 0.6);
+/* ================================
+   ENQUIRY BUTTON
+================================ */
+
+.enquiry-btn{
+    background:#1565C0;
+    animation-delay:2s;
 }
 
-/* Floating Animation */
-@keyframes floatY {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+.enquiry-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(21,101,192,0.6);
 }
 
-.contact-btn {
-  animation: floatY 3s ease-in-out infinite;
+/* ================================
+   FLOAT ANIMATION
+================================ */
+
+@keyframes floatY{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
 }
 
-.call {
-  animation-delay: 1.5s;
+/* ================================
+   ENQUIRY FORM BOX
+================================ */
+
+.enquiry-box{
+    position:absolute;
+    right:75px;
+    bottom:0;
+
+    width:320px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,0.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:0.3s ease;
 }
+
+/* SHOW FORM */
+
+.enquiry-box.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* ================================
+   FORM TITLE
+================================ */
+
+.enquiry-box h3{
+    margin:0 0 18px;
+    text-align:center;
+
+    font-size:24px;
+    font-weight:700;
+
+    color:#222;
+}
+
+/* ================================
+   INPUT FIELDS
+================================ */
+
+.enquiry-box input,
+.enquiry-box textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    margin-bottom:14px;
+
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    font-size:14px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:0.3s ease;
+}
+
+/* INPUT FOCUS */
+
+.enquiry-box input:focus,
+.enquiry-box textarea:focus{
+    border-color:#1565C0;
+}
+
+/* TEXTAREA */
+
+.enquiry-box textarea{
+    height:100px;
+    resize:none;
+}
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+.enquiry-box button[type="submit"]{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#1565C0;
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.enquiry-box button[type="submit"]:hover{
+    background:#0D47A1;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media(max-width:768px){
+
+    .floating-contact{
+        right:15px;
+        bottom:15px;
+        gap:12px;
+    }
+
+    .contact-btn{
+        width:54px;
+        height:54px;
+        font-size:21px;
+    }
+
+    .enquiry-box{
+
+        right:70px;
+        bottom:0;
+
+        width:260px;
+
+        padding:18px;
+    }
+
+    .enquiry-box h3{
+        font-size:20px;
+    }
+}
+
 </style>
+
 <body class="custom-cursor">
 <div class="floating-contact">
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/917200856662" target="_blank" class="contact-btn whatsapp">
+  <!-- <a href="https://wa.me/917200856662" target="_blank" class="contact-btn whatsapp">
     <i class="fab fa-whatsapp"></i>
-  </a>
+  </a> -->
 
-  <!-- Call -->
+  <!-- Call Button -->
   <a href="tel:+917200856662" class="contact-btn call">
     <i class="fas fa-phone"></i>
   </a>
+
+  <!-- Contact Form Toggle -->
+  <button id="formToggle" class="contact-btn enquiry-btn" type="button">
+    <i class="fas fa-envelope"></i>
+  </button>
+
+  <!-- Contact Form -->
+  <div class="enquiry-box" id="enquiryBox">
+    <h3>Quick Enquiry</h3>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+
+      <input 
+        type="tel" 
+        placeholder="Mobile Number" 
+        pattern="[0-9]{10}" 
+        maxlength="10"
+        required
+      >
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </div>
 
 </div>
 
@@ -716,21 +931,20 @@
 
 
  <script>
-  const toggleBtn = document.getElementById("callToggle");
-  const enquiryBox = document.getElementById("enquiryBox");
+const formToggle = document.getElementById("formToggle");
+const enquiryBox = document.getElementById("enquiryBox");
 
-  toggleBtn.addEventListener("click", () => {
-    enquiryBox.style.display =
-      enquiryBox.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".floating-contact")) {
-      enquiryBox.style.display = "none";
-    }
-  });
-  toggleBtn.addEventListener("click", () => {
+/* Toggle Form */
+formToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
   enquiryBox.classList.toggle("show");
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".floating-contact")) {
+    enquiryBox.classList.remove("show");
+  }
 });
 </script>
 

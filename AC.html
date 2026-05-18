@@ -2,10 +2,11 @@
 <html lang="en">
 
 
+<!-- Mirrored from weblayout.mnsithub.com/html/fixpro/main-html/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 May 2026 04:50:52 GMT -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> RB Electronics </title>
+    <title> Rb Electronics</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -54,85 +55,276 @@
     <link rel="stylesheet" href="assets/css/module-css/testimonial.css" />
     <link rel="stylesheet" href="assets/css/module-css/blog.css" />
     <link rel="stylesheet" href="assets/css/module-css/page-header.css" />
-    <link rel="stylesheet" href="assets/css/module-css/sliding-text.css" />
     <link rel="stylesheet" href="assets/css/module-css/faq.css" />
+    <link rel="stylesheet" href="assets/css/module-css/error.css" />
+    <link rel="stylesheet" href="assets/css/module-css/sliding-text.css" />
 
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
+<style>
 
- <style>
-    .floating-contact {
-  position: fixed;
-  right: 20px;
-  bottom: 30px;
-  z-index: 9999;
+/* ================================
+   FLOATING CONTACT WRAPPER
+================================ */
 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.floating-contact{
+    position:fixed;
+    right:20px;
+    bottom:20px;   /* Fixed Bottom */
+    z-index:99999;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    gap:14px;
 }
 
-/* Buttons Base */
-.contact-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ================================
+   BUTTON BASE
+================================ */
 
-  font-size: 22px;
-  color: #fff;
-  text-decoration: none;
+.contact-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-  position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+
+    color:#fff;
+    font-size:24px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,0.25);
+
+    transition:0.3s ease;
+
+    position:relative;
+
+    animation:floatY 3s ease-in-out infinite;
 }
 
-/* WhatsApp (Official Green) */
-.whatsapp {
-  background: #25D366;
+/* ================================
+   WHATSAPP BUTTON
+================================ */
+
+.whatsapp{
+    background:#25D366;
 }
 
-/* Call (Professional Red) */
-.call {
-  background: #E53935;
+.whatsapp:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(37,211,102,0.6);
 }
 
-/* Hover Effects */
-.contact-btn:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+/* ================================
+   CALL BUTTON
+================================ */
+
+.call{
+    background:#E53935;
+    animation-delay:1s;
 }
 
-/* Glow Effect */
-.whatsapp:hover {
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+.call:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(229,57,53,0.6);
 }
 
-.call:hover {
-  box-shadow: 0 0 15px rgba(229, 57, 53, 0.6);
+/* ================================
+   ENQUIRY BUTTON
+================================ */
+
+.enquiry-btn{
+    background:#1565C0;
+    animation-delay:2s;
 }
 
-/* Floating Animation */
-@keyframes floatY {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+.enquiry-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(21,101,192,0.6);
 }
 
-.contact-btn {
-  animation: floatY 3s ease-in-out infinite;
+/* ================================
+   FLOAT ANIMATION
+================================ */
+
+@keyframes floatY{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
 }
 
-.call {
-  animation-delay: 1.5s;
+/* ================================
+   ENQUIRY FORM BOX
+================================ */
+
+.enquiry-box{
+    position:absolute;
+    right:75px;
+    bottom:0;
+
+    width:320px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,0.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:0.3s ease;
 }
+
+/* SHOW FORM */
+
+.enquiry-box.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* ================================
+   FORM TITLE
+================================ */
+
+.enquiry-box h3{
+    margin:0 0 18px;
+    text-align:center;
+
+    font-size:24px;
+    font-weight:700;
+
+    color:#222;
+}
+
+/* ================================
+   INPUT FIELDS
+================================ */
+
+.enquiry-box input,
+.enquiry-box textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    margin-bottom:14px;
+
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    font-size:14px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:0.3s ease;
+}
+
+/* INPUT FOCUS */
+
+.enquiry-box input:focus,
+.enquiry-box textarea:focus{
+    border-color:#1565C0;
+}
+
+/* TEXTAREA */
+
+.enquiry-box textarea{
+    height:100px;
+    resize:none;
+}
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+.enquiry-box button[type="submit"]{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#1565C0;
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.enquiry-box button[type="submit"]:hover{
+    background:#0D47A1;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media(max-width:768px){
+
+    .floating-contact{
+        right:15px;
+        bottom:15px;
+        gap:12px;
+    }
+
+    .contact-btn{
+        width:54px;
+        height:54px;
+        font-size:21px;
+    }
+
+    .enquiry-box{
+
+        right:70px;
+        bottom:0;
+
+        width:260px;
+
+        padding:18px;
+    }
+
+    .enquiry-box h3{
+        font-size:20px;
+    }
+}
+
 </style>
+
 <body class="custom-cursor">
 <div class="floating-contact">
 
@@ -141,10 +333,36 @@
     <i class="fab fa-whatsapp"></i>
   </a> -->
 
-  <!-- Call -->
+  <!-- Call Button -->
   <a href="tel:+917200856662" class="contact-btn call">
     <i class="fas fa-phone"></i>
   </a>
+
+  <!-- Contact Form Toggle -->
+  <button id="formToggle" class="contact-btn enquiry-btn" type="button">
+    <i class="fas fa-envelope"></i>
+  </button>
+
+  <!-- Contact Form -->
+  <div class="enquiry-box" id="enquiryBox">
+    <h3>Quick Enquiry</h3>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+
+      <input 
+        type="tel" 
+        placeholder="Mobile Number" 
+        pattern="[0-9]{10}" 
+        maxlength="10"
+        required
+      >
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </div>
 
 </div>
 
@@ -153,8 +371,8 @@
     <div class="custom-cursor__cursor-two"></div>
 
 
-  <div class="page-wrapper">
-         <header class="main-header-three">
+    <div class="page-wrapper">
+        <header class="main-header-three">
             <div class="main-menu-three__top">
                 <div class="container">
                     <div class="main-menu-three__top-inner">
@@ -258,16 +476,16 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header__bg" style="background-image: url(assets/images/banner7.jpg);">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner2.png);">
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h3>Air Conditioner</h3>
+                    <h3>About</h3>
                     <div class="thm-breadcrumb__inner">
                         <ul class="thm-breadcrumb list-unstyled">
                             <li><a href="index.html">Home</a></li>
                             <li><span class="icon-angle-right"></span></li>
-                            <li>Air Conditioner</li>
+                            <li>About</li>
                         </ul>
                     </div>
                 </div>
@@ -275,400 +493,341 @@
         </section>
         <!--Page Header End-->
 
-   
+      <!--About One Start -->
+<section class="about-one about-page">
+    <div class="container">
+        <div class="row">
 
-  <!--Service Details Start-->
-        <section class="service-details">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="service-details__sidebar">
-                            <div class="service-details__services-box">
-                                <h3 class="service-details__services-title">Our Services</h3>
-                                <ul class="service-details__services-list list-unstyled">
-                                    <li>
-                                        <a href="LEDTV.html">Maintenance Service<span
-                                                class="icon-arrow-right"></span></a>
-                                    </li>
-                                    <li >
-                                        <a href="refrigerator.html">Refrigerator<span
-                                                class="icon-arrow-right"></span></a>
-                                    </li>
-                                    <li >
-                                        <a href="microwave.html">Microwave<span
-                                                class="icon-arrow-right"></span></a>
-                                    </li>
-                                    <li >
-                                        <a href="washingmachine.html">Washing Machine<span
-                                                class="icon-arrow-right"></span></a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="AC.html">Air Conditioner<span
-                                                class="icon-arrow-right"></span></a>
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                            <div class="service-details__get-started">
-                                <h3 class="service-details__get-started-title">Get Started Today</h3>
-                                  <p class="service-details__get-started-text">
-                We provide fast and reliable Air Conditioner repair services with experienced
-                technicians for all major brands and models.
-            </p>
-                                <ul class="service-details__get-started-points list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-call"></span>
-                                        </div>
-                                        <p><a href="tel:+919876543210">+91 9876543210</a></p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-envelope"></span>
-                                        </div>
-                                        <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-location"></span>
-                                        </div>
-                                        <p>Chennai, TamilNadu</p>
-                                    </li>
-                                </ul>
-                                <div class="service-details__get-started-btn-box">
-                                    <a href="contact.html" class="service-details__get-started-btn thm-btn">get in
-                                        touch</a>
-                                </div>
-                            </div>
-                         
+            <div class="col-xl-6">
+                <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+
+                    <div class="about-one__img-box">
+
+                        <div class="about-one__img">
+                            <img src="assets/images/resources/about-one-img-1.jpg" alt="">
                         </div>
+
+                        <div class="about-one__img-2">
+                            <img src="assets/images/a4.jpg" alt="">
+                        </div>
+
+                        <div class="about-one__shape-2 float-bob-y">
+                            <img src="assets/images/shapes/about-one-shape-2.png" alt="">
+                        </div>
+
+                        <div class="about-one__experience-box">
+                            <div class="about-one__count-box">
+                                <h3 class="odometer" data-count="15">00</h3>
+                                <span>+</span>
+                            </div>
+
+                            <p class="about-one__experience-text">
+                                Years of Experience in Electronics & Home Appliance Services
+                            </p>
+                        </div>
+
+                        <div class="about-one__shape-1 float-bob-x"></div>
+
                     </div>
-                  
-<div class="col-xl-8 col-lg-7">
-    <div class="service-details__left">
+                </div>
+            </div>
 
-        <div class="service-details__img">
-            <img src="assets/images/ac.jpg" alt="Air Conditioner Service">
+            <div class="col-xl-6">
+                <div class="about-one__right wow fadeInRight" data-wow-delay="300ms">
+
+                    <div class="section-title text-left sec-title-animation animation-style2">
+
+                        <h6 class="section-title__tagline">
+                            <span class="section-title__tagline-border"></span>
+                            ABOUT US
+                        </h6>
+
+                        <h3 class="section-title__title title-animation">
+                            Welcome To RB Electronics
+                        </h3>
+
+                    </div>
+
+                    <p class="about-one__text">
+                        RB Electronics is a trusted home appliance repair and service
+                        company in Chennai, providing professional solutions for LED TVs,
+                        refrigerators, washing machines, microwaves, and air conditioners.
+                        We focus on quality service, fast response, and complete customer satisfaction.
+                    </p>
+
+                    <div class="about-one__points-box">
+
+                        <ul class="about-one__points list-unstyled">
+
+                            <li>
+                                <div class="icon">
+                                    <span class="icon-affordable-price"></span>
+                                </div>
+
+                                <div class="content">
+                                    <h4>Affordable Service Charges</h4>
+                                    <p>Reliable repair solutions at budget-friendly prices</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="icon">
+                                    <span class="icon-happy-customer"></span>
+                                </div>
+
+                                <div class="content">
+                                    <h4>Trusted Customer Support</h4>
+                                    <p>Dedicated service with customer satisfaction guaranteed</p>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <ul class="about-one__points-two list-unstyled">
+
+                        <li>
+                            <div class="icon">
+                                <span class="icon-check"></span>
+                            </div>
+                            <p>Experienced technicians for all major appliance brands.</p>
+                        </li>
+
+                        <li>
+                            <div class="icon">
+                                <span class="icon-check"></span>
+                            </div>
+                            <p>Fast doorstep repair and maintenance services across Chennai.</p>
+                        </li>
+
+                        <li>
+                            <div class="icon">
+                                <span class="icon-check"></span>
+                            </div>
+                            <p>Quality spare parts and professional repair support.</p>
+                        </li>
+
+                    </ul>
+
+                    <div class="about-one__btn-and-video">
+
+                        <div class="about-one__btn-box">
+                            <a href="contact.html" class="thm-btn">
+                                Contact Us
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
+    </div>
+</section>
+<!--About One End -->
 
-        <h3 class="service-details__title-1">
-            Professional Air Conditioner Repair Service
-        </h3>
 
-        <p class="service-details__text-1">
-            RB Electronics provides expert air conditioner repair and maintenance
-            services for all leading brands. Our experienced technicians quickly
-            identify and fix cooling issues, gas leakage, compressor faults, and
-            electrical problems with reliable repair solutions.
-        </p>
-
-        <p class="service-details__text-2">
-            We offer fast doorstep AC repair services across Chennai using
-            quality spare parts and advanced tools. From split AC to window AC
-            systems, we ensure efficient servicing and complete customer
-            satisfaction.
-        </p>
-
-        <ul class="service-details__points-list list-unstyled">
+       <!--Sliding Text Start-->
+<section class="sliding-text sliding-text-two">
+    <div class="sliding-text__inner">
+        <ul class="sliding-text__list marquee_mode-1 list-unstyled">
 
             <li>
                 <div class="icon">
-                    <span class="icon-arrow-right"></span>
+                    <img src="assets/images/resources/sliding-text-img-1.png" alt="">
                 </div>
-                <p>AC cooling and compressor repair services</p>
+                <p>Expert Appliance Repair</p>
             </li>
 
             <li>
                 <div class="icon">
-                    <span class="icon-arrow-right"></span>
+                    <img src="assets/images/resources/sliding-text-img-1.png" alt="">
                 </div>
-                <p>Gas refill and leakage issue fixing</p>
+                <p>Experienced Technicians</p>
             </li>
 
             <li>
                 <div class="icon">
-                    <span class="icon-arrow-right"></span>
+                    <img src="assets/images/resources/sliding-text-img-1.png" alt="">
                 </div>
-                <p>Installation, maintenance, and electrical support</p>
+                <p>Affordable Service Charges</p>
             </li>
 
             <li>
                 <div class="icon">
-                    <span class="icon-arrow-right"></span>
+                    <img src="assets/images/resources/sliding-text-img-1.png" alt="">
                 </div>
-                <p>Quick doorstep air conditioner service across Chennai</p>
+                <p>Quick Doorstep Support</p>
+            </li>
+
+            <li>
+                <div class="icon">
+                    <img src="assets/images/resources/sliding-text-img-1.png" alt="">
+                </div>
+                <p>Trusted Repair Solutions</p>
+            </li>
+
+            <li>
+                <div class="icon">
+                    <img src="assets/images/resources/sliding-text-img-1.png" alt="">
+                </div>
+                <p>100% Customer Satisfaction</p>
             </li>
 
         </ul>
+    </div>
+</section>
+<!--Sliding Text End-->
+     
 
-        <div class="service-details__img-box">
-            <div class="row">
 
-                <div class="col-xl-6">
-                    <div class="service-details__img-box-single">
+   <!--Why Choose One Start -->
+<section class="why-choose-one">
+    <div class="container">
 
-                        <div class="service-details__img-box-content">
+        <div class="row">
 
-                            <div class="service-details__img-box-content-icon-and-title">
-                                <div class="service-details__img-box-content-icon">
-                                    <span class="icon-project-complete"></span>
-                                </div>
+            <div class="col-xl-6">
+                <div class="why-choose-one__left">
 
-                                <h3 class="service-details__img-box-content-title">
-                                    Trusted AC Service
-                                </h3>
+                    <div class="section-title text-left sec-title-animation animation-style2">
+
+                        <h6 class="section-title__tagline">
+                            <span class="section-title__tagline-border"></span>
+                            Why Choose Us
+                        </h6>
+
+                        <h3 class="section-title__title title-animation">
+                            Reliable Home Appliance
+                            Repair Experts In Chennai
+                        </h3>
+
+                    </div>
+
+                    <p class="why-choose-one__text">
+                        RB Electronics is committed to delivering fast, affordable,
+                        and professional repair services for all major home appliances.
+                        Our experienced technicians provide quality solutions with
+                        customer satisfaction as our top priority.
+                    </p>
+
+                    <div class="why-choose-one__list-box">
+
+                        <div class="row">
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+
+                                <ul class="why-choose-one__list list-unstyled">
+
+                                    <li class="wow fadeInLeft" data-wow-delay="100ms">
+
+                                        <div class="icon">
+                                            <span class="icon-product-return"></span>
+                                        </div>
+
+                                        <div class="content">
+                                            <h3>Service Warranty</h3>
+                                            <p>Reliable repair support with quality assurance.</p>
+                                        </div>
+
+                                    </li>
+
+                                    <li class="wow fadeInLeft" data-wow-delay="400ms">
+
+                                        <div class="icon">
+                                            <span class="icon-setting"></span>
+                                        </div>
+
+                                        <div class="content">
+                                            <h3>Advanced Tools</h3>
+                                            <p>Professional equipment for accurate repair services.</p>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
                             </div>
 
-                            <p class="service-details__img-box-content-text">
-                                We provide dependable air conditioner repair
-                                services using genuine spare parts and modern
-                                tools for efficient cooling performance.
-                            </p>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+
+                                <ul class="why-choose-one__list list-unstyled">
+
+                                    <li class="wow fadeInRight" data-wow-delay="200ms">
+
+                                        <div class="icon">
+                                            <span class="icon-happy-customer"></span>
+                                        </div>
+
+                                        <div class="content">
+                                            <h3>Customer Support</h3>
+                                            <p>Friendly assistance with quick response service.</p>
+                                        </div>
+
+                                    </li>
+
+                                    <li class="wow fadeInRight" data-wow-delay="300ms">
+
+                                        <div class="icon">
+                                            <span class="icon-like"></span>
+                                        </div>
+
+                                        <div class="content">
+                                            <h3>Trusted Service</h3>
+                                            <p>Affordable and dependable appliance repair solutions.</p>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
 
                         </div>
+
                     </div>
+
                 </div>
+            </div>
 
-                <div class="col-xl-6">
-                    <div class="service-details__img-box-single">
+            <div class="col-xl-6">
 
-                        <div class="service-details__img-box-content">
+                <div class="why-choose-one__right wow slideInRight" data-wow-delay="100ms"
+                    data-wow-duration="2500ms">
 
-                            <div class="service-details__img-box-content-icon-and-title">
-                                <div class="service-details__img-box-content-icon">
-                                    <span class="icon-certified"></span>
-                                </div>
+                    <div class="why-choose-one__img-box">
 
-                                <h3 class="service-details__img-box-content-title">
-                                    100% Customer Satisfaction
-                                </h3>
-                            </div>
-
-                            <p class="service-details__img-box-content-text">
-                                Our skilled technicians ensure fast response,
-                                affordable pricing, and quality AC repair
-                                services for every customer.
-                            </p>
-
+                        <div class="why-choose-one__img">
+                            <img src="assets/images/a5.png" alt="">
                         </div>
+
+                        <div class="why-choose-one__img-2">
+                            <img src="assets/images/a6.png" alt="">
+                        </div>
+
+                        <div class="why-choose-one__shape-1"></div>
+
+                       
+
                     </div>
+
                 </div>
 
             </div>
+
         </div>
 
     </div>
-</div>
+</section>
+<!--Why Choose One End -->
 
-                </div>
-            </div>
-        </section>
-        <!--Service Details End-->
-  <!--Sliding Text Start-->
-        <!-- <section class="sliding-text">
-            <div class="sliding-text__inner">
-                <ul class="sliding-text__list marquee_mode-1 list-unstyled">
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>
-                            Blue Star AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>BPL AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Carrier AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Croma AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Daikin AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Godrej AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p> Gree AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p> Haier AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Hisense AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Hitachi AC</p>
-                    </li>
-                      <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Hyundai AC</p>
-                    </li>
-                      <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>IFB AC</p>
-                    </li>
-                      <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Intex AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Samsung AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p> Panasonic AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Onida AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>O General AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p> Mitsubishi AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Mitashi AC</p>
-                    </li>
-                    
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Midea AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Lloyd AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>LG AC</p>
-                    </li>
-                    <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Sansui AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>TCL AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Thomson AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Toshiba AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Trane AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Vestar AC</p>
-                    </li>
-                     <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Videocon AC</p>
-                    </li>
-                      <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Voltas AC</p>
-                    </li>
-                      <li>
-                        <div class="icon">
-                            <img src="assets/images/resources/sliding-text-img-1.png" alt="">
-                        </div>
-                        <p>Whirlpool AC</p>
-                    </li>
-                </ul>
-            </div>
-        </section> -->
-        <!--Sliding Text End-->
+ 
 
 
-
-
-
-
-
-
-   <!--Site Footer Two Start-->
+ <!--Site Footer Two Start-->
         <footer class="site-footer-two">
             <div class="site-footer-two__shape-1 float-bob-x">
                 <img src="assets/images/shapes/site-footer-two-shape-1.png" alt="">
@@ -832,6 +991,9 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
+
+   
+
     <script src="assets/js/jquery-latest.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jarallax.min.js"></script>
@@ -860,22 +1022,21 @@
     <script src="assets/js/gsap/ScrollTrigger.js"></script>
     <script src="assets/js/gsap/SplitText.js"></script>
 
- <script>
-  const toggleBtn = document.getElementById("callToggle");
-  const enquiryBox = document.getElementById("enquiryBox");
+<script>
+const formToggle = document.getElementById("formToggle");
+const enquiryBox = document.getElementById("enquiryBox");
 
-  toggleBtn.addEventListener("click", () => {
-    enquiryBox.style.display =
-      enquiryBox.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".floating-contact")) {
-      enquiryBox.style.display = "none";
-    }
-  });
-  toggleBtn.addEventListener("click", () => {
+/* Toggle Form */
+formToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
   enquiryBox.classList.toggle("show");
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".floating-contact")) {
+    enquiryBox.classList.remove("show");
+  }
 });
 </script>
 
@@ -885,5 +1046,5 @@
 </body>
 
 
-<!-- Mirrored from weblayout.mnsithub.com/html/fixpro/main-html/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 May 2026 04:50:55 GMT -->
+<!-- Mirrored from weblayout.mnsithub.com/html/fixpro/main-html/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 May 2026 04:50:52 GMT -->
 </html>

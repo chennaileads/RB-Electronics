@@ -323,7 +323,144 @@
         font-size:20px;
     }
 }
+/* ================================
+   PRIVACY POLICY CHECKBOX STYLES
+================================ */
 
+.contact-page__privacy-box {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.privacy-check-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 0;
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Hide default checkbox */
+.privacy-check-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 12px;
+    margin-top: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Checkbox hover */
+.privacy-check-label:hover .checkmark {
+    border-color: #1565C0;
+}
+
+/* Checked state */
+.privacy-check-label input:checked ~ .checkmark {
+    background: #1565C0;
+    border-color: #1565C0;
+}
+
+/* Checkmark icon */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.privacy-check-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Privacy text */
+.privacy-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.privacy-text a {
+    color: #1565C0;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.privacy-text a:hover {
+    color: #0D47A1;
+    text-decoration: none;
+}
+
+/* Required star */
+.required-star {
+    color: #E53935;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Error state for validation */
+.privacy-check-label input:invalid ~ .checkmark {
+    border-color: #E53935;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .privacy-check-label {
+        font-size: 13px;
+    }
+    
+    .checkmark {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+    }
+    
+    .privacy-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page__privacy-box {
+        padding: 0 5px;
+    }
+    
+    .privacy-text {
+        font-size: 12px;
+    }
+}
 </style>
 
 <body class="custom-cursor">
@@ -550,7 +687,7 @@
                         <div class="col-xl-6">
                             <div class="contact-page__right">
                                 <h3 class="contact-page__form-title">Get A Free Quote</h3>
-                             <form id="contact-form" class="contact-form-validated contact-page__form"
+                    <form id="contact-form" class="contact-form-validated contact-page__form"
     action="mail.php" method="POST">
 
     <div class="row">
@@ -585,7 +722,25 @@
                     placeholder="Describe Your Appliance Issue"
                     required></textarea>
             </div>
+        </div>
 
+        <!-- Privacy Policy Checkbox -->
+        <div class="col-xl-12">
+            <div class="contact-page__privacy-box">
+                <label class="privacy-check-label" for="privacyCheckbox">
+                    <input type="checkbox" id="privacyCheckbox" name="privacy_consent" required="">
+                    <span class="checkmark"></span>
+                    <span class="privacy-text">
+                        I agree to the 
+                        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+                        and consent to RB Electronics collecting and processing my personal data as described therein.
+                        <span class="required-star">*</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
             <div class="contact-page__btn-box">
 
                 <button type="submit"
@@ -654,6 +809,8 @@
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="services.html">Services</a></li>
                                         <li><a href="contact.html">Contact</a></li>
+                                                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
                                         
                                     </ul>
                                 </div>

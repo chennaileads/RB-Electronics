@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Privacy Policy • RB Electronics</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <meta name="description" content="RB Electronics Privacy Policy - how we collect and protect your data." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+
+    <!-- base styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-all.css" />
+    <link rel="stylesheet" href="assets/css/jarallax.css" />
+    <link rel="stylesheet" href="assets/css/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+
+    <!-- module css -->
+    <link rel="stylesheet" href="assets/css/module-css/slider.css" />
+    <link rel="stylesheet" href="assets/css/module-css/footer.css" />
+    <link rel="stylesheet" href="assets/css/module-css/feature.css" />
+    <link rel="stylesheet" href="assets/css/module-css/about.css" />
+    <link rel="stylesheet" href="assets/css/module-css/service.css" />
+    <link rel="stylesheet" href="assets/css/module-css/counter.css" />
+    <link rel="stylesheet" href="assets/css/module-css/why-choose.css" />
+    <link rel="stylesheet" href="assets/css/module-css/project.css" />
+    <link rel="stylesheet" href="assets/css/module-css/video.css" />
+    <link rel="stylesheet" href="assets/css/module-css/team.css" />
+    <link rel="stylesheet" href="assets/css/module-css/brand.css" />
+    <link rel="stylesheet" href="assets/css/module-css/pricing.css" />
+    <link rel="stylesheet" href="assets/css/module-css/testimonial.css" />
+    <link rel="stylesheet" href="assets/css/module-css/blog.css" />
+    <link rel="stylesheet" href="assets/css/module-css/page-header.css" />
+    <link rel="stylesheet" href="assets/css/module-css/faq.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- inline style for floating contact + policy page refinement -->
+    <style>
+        /* floating contact styles (consistent with your page) */
+        .floating-contact{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            z-index:99999;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:flex-end;
+            gap:14px;
+        }
+        .contact-btn{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-decoration:none;
+            border:none;
+            cursor:pointer;
+            color:#fff;
+            font-size:24px;
+            box-shadow:0 8px 22px rgba(0,0,0,0.25);
+            transition:0.3s ease;
+            position:relative;
+            animation:floatY 3s ease-in-out infinite;
+        }
+        .whatsapp{
+            background:#25D366;
+        }
+        .whatsapp:hover{
+            transform:scale(1.1);
+            box-shadow:0 0 18px rgba(37,211,102,0.6);
+        }
+        .call{
+            background:#E53935;
+            animation-delay:1s;
+        }
+        .call:hover{
+            transform:scale(1.1);
+            box-shadow:0 0 18px rgba(229,57,53,0.6);
+        }
+        .enquiry-btn{
+            background:#1565C0;
+            animation-delay:2s;
+        }
+        .enquiry-btn:hover{
+            transform:scale(1.1);
+            box-shadow:0 0 18px rgba(21,101,192,0.6);
+        }
+        @keyframes floatY{
+            0%{transform:translateY(0);}
+            50%{transform:translateY(-6px);}
+            100%{transform:translateY(0);}
+        }
+        .enquiry-box{
+            position:absolute;
+            right:75px;
+            bottom:0;
+            width:320px;
+            background:#fff;
+            border-radius:18px;
+            padding:22px;
+            box-shadow:0 12px 35px rgba(0,0,0,0.18);
+            opacity:0;
+            visibility:hidden;
+            transform:translateY(20px);
+            transition:0.3s ease;
+        }
+        .enquiry-box.show{
+            opacity:1;
+            visibility:visible;
+            transform:translateY(0);
+        }
+        .enquiry-box h3{
+            margin:0 0 18px;
+            text-align:center;
+            font-size:24px;
+            font-weight:700;
+            color:#222;
+        }
+        .enquiry-box input,
+        .enquiry-box textarea{
+            width:100%;
+            padding:13px 15px;
+            margin-bottom:14px;
+            border:1px solid #ddd;
+            border-radius:12px;
+            font-size:14px;
+            outline:none;
+            box-sizing:border-box;
+            transition:0.3s ease;
+        }
+        .enquiry-box input:focus,
+        .enquiry-box textarea:focus{
+            border-color:#1565C0;
+        }
+        .enquiry-box textarea{
+            height:100px;
+            resize:none;
+        }
+        .enquiry-box button[type="submit"]{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:12px;
+            background:#1565C0;
+            color:#fff;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s ease;
+        }
+        .enquiry-box button[type="submit"]:hover{
+            background:#0D47A1;
+        }
+        @media(max-width:768px){
+            .floating-contact{
+                right:15px;
+                bottom:15px;
+                gap:12px;
+            }
+            .contact-btn{
+                width:54px;
+                height:54px;
+                font-size:21px;
+            }
+            .enquiry-box{
+                right:70px;
+                bottom:0;
+                width:260px;
+                padding:18px;
+            }
+            .enquiry-box h3{
+                font-size:20px;
+            }
+        }
+
+        /* privacy page specific spacing */
+        .privacy-content {
+            padding: 70px 0 80px;
+            background: #fff;
+        }
+        .privacy-content .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .privacy-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            color: #1c1c1c;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .privacy-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2.2rem 0 1rem;
+            color: #0f1b2d;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .privacy-content p,
+        .privacy-content li {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #4a4a4a;
+            margin-bottom: 1.1rem;
+            font-family: 'Archivo', sans-serif;
+        }
+        .privacy-content ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+            margin-bottom: 1.8rem;
+        }
+        .privacy-content a {
+            color: #1565C0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .privacy-content a:hover {
+            text-decoration: underline;
+            color: #0D47A1;
+        }
+        .page-header__inner h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .contact-highlight {
+            background: #f5f7fc;
+            padding: 25px 30px;
+            border-radius: 16px;
+            margin-top: 2.2rem;
+            border-left: 5px solid #1565C0;
+        }
+        .contact-highlight p {
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <!-- floating contact widgets (same as original) -->
+    <div class="floating-contact">
+        <a href="https://wa.me/917200856662" target="_blank" class="contact-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917200856662" class="contact-btn call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <button id="formToggle" class="contact-btn enquiry-btn" type="button">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <div class="enquiry-box" id="enquiryBox">
+            <h3>Quick Enquiry</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="page-wrapper">
+        <!-- header (consistent with your site) -->
+        <header class="main-header-three">
+            <div class="main-menu-three__top">
+                <div class="container">
+                    <div class="main-menu-three__top-inner">
+                        <ul class="list-unstyled main-menu-three__contact-list">
+                            <li>
+                                <div class="icon"><i class="icon-call"></i></div>
+                                <div class="text"><p><a href="tel:+917200856662">+91 72008 56662</a></p></div>
+                            </li>
+                            <li>
+                                <div class="icon"><i class="icon-location"></i></div>
+                                <div class="text"><p>Chennai, Tamil Nadu</p></div>
+                            </li>
+                        </ul>
+                        <div class="main-menu-three__top-right">
+                            <div class="main-menu-three__social">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu main-menu-three">
+                <div class="main-menu-three__wrapper">
+                    <div class="container">
+                        <div class="main-menu-three__wrapper-inner">
+                            <div class="main-menu-three__left">
+                                <div class="main-menu-three__logo">
+                                    <a href="index.html"><h1>RB Electronics</h1></a>
+                                </div>
+                            </div>
+                            <div class="main-menu-two__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li class="megamenu"><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="dropdown">
+                                        <a href="services.html">Services</a>
+                                        <ul class="shadow-box">
+                                            <li><a href="LEDTV.html">LED Tv</a></li>
+                                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                                            <li><a href="microwave.html">Microwave</a></li>
+                                            <li><a href="washingmachine.html">Washing Machine</a></li>
+                                            <li><a href="AC.html">Air Conditioner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="main-menu-three__right">
+                                <div class="main-menu-three__btn-box">
+                                    <a href="contact.html" class="thm-btn">Book Now<span class="icon-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!-- Page Header Start -->
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(assets/images/banner4.png);"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h3>Privacy Policy</h3>
+                    <div class="thm-breadcrumb__inner">
+                        <ul class="thm-breadcrumb list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><span class="icon-angle-right"></span></li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Page Header End -->
+
+        <!-- Privacy Policy Content Start -->
+        <section class="privacy-content">
+            <div class="container">
+                <div class="privacy-inner">
+                    <!-- <p><strong>Effective Date:</strong> January 2026</p> -->
+                    <p>
+                        At <strong>RB Electronics</strong>, we are committed to protecting the privacy of our customers. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our services. We provide repair and servicing of household appliances such as refrigerators, stoves, washing machines, clothes dryers, room air conditioners, and more. By using our services, you agree to the terms and conditions of this Privacy Policy.
+                    </p>
+
+                    <h3>Information We Collect</h3>
+                    <p>
+                        We collect personal information from you when you book a service with us, including your name, phone number, email address, and home address. We also collect information about the appliance that requires servicing, including the make, model, and serial number. This information is necessary for us to provide you with our services and to communicate with you about your appointment.
+                    </p>
+
+                    <h3>How We Use Your Information</h3>
+                    <p>
+                        We use your personal information to provide you with our services, to communicate with you about your appointment, and to improve our services. We may also use your information to send you promotional emails and newsletters about our services and special offers. You may opt-out of these emails at any time.
+                    </p>
+                    <p>
+                        We may share your personal information with third-party service providers who assist us in providing our services, such as shipping and delivery companies. We may also share your information with law enforcement agencies or other government authorities if required by law.
+                    </p>
+                    <p><strong>We do not sell or rent your personal information to third-party companies.</strong></p>
+
+                    <h3>How We Protect Your Information</h3>
+                    <p>
+                        We take the security of your personal information seriously and have implemented appropriate measures to protect your information from unauthorized access, disclosure, and misuse. We use industry-standard encryption technologies to protect your personal information during transmission and storage. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee the absolute security of your information.
+                    </p>
+
+                    <h3>Your Rights</h3>
+                    <p>
+                        You have the right to access, correct, or delete your personal information at any time. You may also request that we restrict the processing of your personal information or object to its processing. If you wish to exercise any of these rights, please contact us at the contact information provided below.
+                    </p>
+
+                    <h3>Changes to Our Privacy Policy</h3>
+                    <p>
+                        We reserve the right to modify or update this Privacy Policy at any time. We will notify you of any changes by posting the new Privacy Policy on our website. It is your responsibility to review this Privacy Policy periodically to stay informed of any updates.
+                    </p>
+
+                    <div class="contact-highlight">
+                        <h3 style="margin-top: 0; margin-bottom: 1rem;">Contact Us</h3>
+                        <p><strong>RB Electronics</strong><br>Chennai, Tamil Nadu</p>
+                        <p><i class="fas fa-phone-alt" style="margin-right: 8px; color:#1565C0;"></i> <a href="tel:+917200856662">+91 72008 56662</a></p>
+                        <p><i class="fas fa-envelope" style="margin-right: 8px; color:#1565C0;"></i> <a href="mailto:info@rbelectronics.com">info@rbelectronics.com</a></p>
+                        <p style="margin-bottom:0;">Established in 2008 – trusted appliance repair in Chennai.</p>
+                    </div>
+
+                    <p style="margin-top: 2.5rem; font-style: italic;">
+                        Thank you for trusting RB Electronics with your home appliances.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Privacy Policy Content End -->
+
+        <!--Site Footer Two Start-->
+        <footer class="site-footer-two">
+            <div class="site-footer-two__shape-1 float-bob-x">
+                <img src="assets/images/shapes/site-footer-two-shape-1.png" alt="">
+            </div>
+            <div class="container">
+                <div class="site-footer-two__top">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="footer-widget-two__column footer-widget-two__about">
+                                <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__title">About Us</h3>
+                                </div>
+                                <p class="footer-widget-two__about-text">
+                                    RB Electronics provides reliable home appliance repair services with expert technicians for AC, LED TV, refrigerator, microwave, and washing machine repairs.
+                                </p>
+                                <div class="site-footer-two__social">
+                                    <a href="#"><i class="icon-facebook"></i></a>
+                                    <a href="#"><i class="icon-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget-two__column footer-widget-two__usefull-link">
+                                <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__title">Our Company</h3>
+                                </div>
+                                <div class="footer-widget-two__link-box">
+                                    <ul class="footer-widget-two__link list-unstyled">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="footer-widget-two__column footer-widget-two__services">
+                                <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__title">Our Services</h3>
+                                </div>
+                                <ul class="footer-widget-two__link list-unstyled">
+                                    <li><a href="LEDTV.html">LED TV</a></li>
+                                    <li><a href="refrigerator.html">Refrigerator</a></li>
+                                    <li><a href="microwave.html">Microwave</a></li>
+                                    <li><a href="washingmachine.html">Washing Machine</a></li>
+                                    <li><a href="AC.html">Air Conditioner</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget-two__column footer-widget-two__newsletter">
+                                <div class="footer-widget-two__title-box">
+                                    <h3 class="footer-widget-two__newsletter-title">Contact Us</h3>
+                                </div>
+                                <ul class="footer-widget-two__contact list-unstyled">
+                                    <li>
+                                        <div class="icon"><span class="icon-phone-call"></span></div>
+                                        <div class="content"><h3>Mobile</h3><p><a href="tel:+917200856662">+91 72008 56662</a></p></div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><span class="icon-location"></span></div>
+                                        <div class="content"><h3>Location</h3><p>Chennai, TamilNadu</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><span class="icon-envelope"></span></div>
+                                        <div class="content"><h3>Email</h3><p><a href="mailto:info@rbelectronics.com">info@rbelectronics.com</a></p></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-two__bottom">
+                <div class="container">
+                    <div class="site-footer-two__bottom-inner">
+                        <p class="site-footer-two__bottom-text">
+                            © <script>document.write(new Date().getFullYear())</script> RB Electronics. All Rights Reserved. Developed by <a href="https://chennaileads.com/" target="_blank">Chennai Leads</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer Two End-->
+    </div><!-- /.page-wrapper -->
+
+    <!-- mobile nav -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><h1>RB Electronics</h1></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a href="mailto:info@rbelectronics.com">info@rbelectronics.com</a></li>
+                <li><i class="fas fa-phone"></i><a href="tel:+917200856662">+91 72008 56662</a></li>
+            </ul>
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery-latest.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/wNumb.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/marquee.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="assets/js/jquery.fittext.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+    <script src="assets/js/jquery-sidebar-content.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/gsap/gsap.js"></script>
+    <script src="assets/js/gsap/ScrollTrigger.js"></script>
+    <script src="assets/js/gsap/SplitText.js"></script>
+
+    <script>
+        // floating form toggle
+        const formToggle = document.getElementById("formToggle");
+        const enquiryBox = document.getElementById("enquiryBox");
+        if(formToggle && enquiryBox) {
+            formToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                enquiryBox.classList.toggle("show");
+            });
+            document.addEventListener("click", (e) => {
+                if (!e.target.closest(".floating-contact")) {
+                    enquiryBox.classList.remove("show");
+                }
+            });
+        }
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
